@@ -63,7 +63,7 @@ endif
 let colors_name = "ir_black"
 
 " General colors
-hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NONE        ctermbg=black        cterm=NONE
+hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NONE        ctermbg=black       cterm=NONE
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
@@ -83,25 +83,25 @@ hi WildMenu         guifg=green       guibg=yellow      gui=NONE      ctermfg=bl
 hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
 "hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
-hi Error            guifg=NONE        guibg=NONE        gui=undercurl ctermfg=white       ctermbg=darkred         cterm=NONE     guisp=#FF6C60 " undercurl color
-hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=darkred         cterm=NONE
-hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=darkred         cterm=NONE
-hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE			  cterm=underline
+hi Error            guifg=NONE        guibg=NONE        gui=undercurl ctermfg=white       ctermbg=darkred     cterm=NONE     guisp=#FF6C60 " undercurl color
+hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=darkred     cterm=NONE
+hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=darkred     cterm=NONE
+hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE		  cterm=underline
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=NONE     gui=BOLD      ctermfg=white       ctermbg=NONE        cterm=BOLD
+hi ModeMsg          guifg=black       guibg=NONE		gui=BOLD      ctermfg=white       ctermbg=NONE        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=8			  cterm=BOLD
   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=#2F2F00     gui=underline ctermfg=black        ctermbg=white cterm=underline
+  hi Search         guifg=NONE        guibg=#2F2F00     gui=underline ctermfg=black       ctermbg=5			  cterm=underline
 endif
 
 " Syntax highlighting
-hi Comment          guifg=#7C7C7C     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=BOLD
+hi Comment          guifg=#7C7C7C     guibg=NONE        gui=italic    ctermfg=darkgray    ctermbg=NONE        cterm=italic
 hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=magenta     ctermbg=NONE        cterm=NONE
 
@@ -112,7 +112,7 @@ hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=bl
 hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=NONE
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 
-hi Identifier		guifg=#C6C5FE	  guibg=NONE		gui=NONE	  ctermfg=Magenta		  ctermbg=NONE		  cterm=NONE
+hi Identifier		guifg=#C6C5FE	  guibg=NONE		gui=NONE	  ctermfg=magenta	  ctermbg=NONE		  cterm=NONE
 hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=brown       ctermbg=NONE        cterm=NONE
 hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=lightblue   ctermbg=NONE        cterm=NONE
