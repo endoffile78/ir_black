@@ -71,7 +71,7 @@ hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=da
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
+hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=black       ctermbg=darkgray    cterm=NONE
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -86,10 +86,10 @@ hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=bl
 hi Error            guifg=NONE        guibg=NONE        gui=undercurl ctermfg=white       ctermbg=darkred         cterm=NONE     guisp=#FF6C60 " undercurl color
 hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=darkred         cterm=NONE
 hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=darkred         cterm=NONE
-hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE	      cterm=underline
+hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE			  cterm=underline
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=NONE     gui=BOLD      ctermfg=black       ctermbg=NONE        cterm=BOLD
+hi ModeMsg          guifg=black       guibg=NONE     gui=BOLD      ctermfg=white       ctermbg=NONE        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
@@ -112,7 +112,7 @@ hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=bl
 hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=NONE
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 
-hi Identifier		guifg=#C6C5FE	  guibg=NONE		gui=NONE	  ctermfg=cyan		  ctermbg=NONE		  cterm=NONE
+hi Identifier		guifg=#C6C5FE	  guibg=NONE		gui=NONE	  ctermfg=Magenta		  ctermbg=NONE		  cterm=NONE
 hi Function         guifg=#FFD2A7     guibg=NONE        gui=NONE      ctermfg=brown       ctermbg=NONE        cterm=NONE
 hi Type             guifg=#FFFFB6     guibg=NONE        gui=NONE      ctermfg=yellow      ctermbg=NONE        cterm=NONE
 hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=lightblue   ctermbg=NONE        cterm=NONE
@@ -120,6 +120,7 @@ hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=li
 hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi ExtrawhiteSpace  guifg=NONE		  guibg=red			gui=NONE	  ctermfg=NONE		  ctermbg=red		  cterm=NONE
 
 hi link Character       Constant
 hi link Boolean         Constant
@@ -140,25 +141,13 @@ hi link SpecialComment  Special
 hi link Debug           Special
 hi link StringDelimiter Delimiter
 
-
 " Special for Ruby
 hi rubyRegexp                  guifg=#B18A3D      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
 hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
 hi rubyEscape                  guifg=white        guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE
 hi rubyInterpolationDelimiter  guifg=#00A0A0      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE
 hi rubyControl                 guifg=#6699CC      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE  "and break, etc
-"hi rubyGlobalVariable          guifg=#FFCCFF      guibg=NONE      gui=NONE      ctermfg=lightblue      ctermbg=NONE      cterm=NONE  "yield
 hi rubyStringDelimiter         guifg=#336633      guibg=NONE      gui=NONE      ctermfg=lightgreen     ctermbg=NONE      cterm=NONE
-"rubyInclude
-"rubySharpBang
-"rubyAccess
-"rubyPredefinedVariable
-"rubyBoolean
-"rubyClassVariable
-"rubyBeginEnd
-"rubyRepeatModifier
-"hi link rubyArrayDelimiter    Special  " [ , , ]
-"rubyCurlyBlock  { , , }
 
 hi link rubyClass             Keyword
 hi link rubyModule            Keyword
@@ -170,7 +159,6 @@ hi link rubyGlobalVariable    Identifier
 hi link rubyClassVariable     Identifier
 hi link rubyConstant          Type
 hi link rubyInclude			  Include
-
 
 " Special for Java
 " hi link javaClassDecl    Type
@@ -184,22 +172,18 @@ hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 "hi javaClassDecl              guifg=#CCFFCC     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 
-
 " Special for XML
 hi link xmlTag          Keyword 
 hi link xmlTagName      Conditional 
 hi link xmlEndTag       Identifier 
-
 
 " Special for HTML
 hi link htmlTag         Keyword 
 hi link htmlTagName     Conditional 
 hi link htmlEndTag      Identifier 
 
-
 " Special for Javascript
 hi link javaScriptNumber Number
-
 
 " Special for Python
 hi link pythonEscape Keyword
@@ -208,12 +192,18 @@ au FileType python syn keyword pythonDecorator self
 " Special for CSharp
 hi link csXmlTag Keyword
 
-
-" Special for PHP
-
 " Gitgutter 
 
 hi GitGutterAdd guifg=green guibg=NONE gui=NONE ctermfg=green ctermbg=NONE
 hi GitGutterChange guifg=darkred guibg=NONE gui=NONE ctermfg=blue ctermbg=NONE
 hi GitGutterDelete guifg=darkred guibg=NONE gui=NONE ctermfg=red  ctermbg=NONE
-hi GitGutterChangeDelete guifg=NONE guibg=NONE gui=NONE ctermfg=darkred ctermbg=NONE
+hi GitGutterChangeDelete guifg=darkred guibg=NONE gui=NONE ctermfg=darkred ctermbg=NONE
+
+" Spelling
+
+hi SpellBad guifg=NONE guibg=darkred gui=underline ctermfg=NONE ctermbg=darkred cterm=underline
+hi SpellCap guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
+hi SpellRare guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
+hi SpellLocal guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
+
+" TODO: Indent Guides
