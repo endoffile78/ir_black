@@ -63,6 +63,7 @@ endif
 let colors_name = "ir_black"
 
 " General colors
+
 hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NONE        ctermbg=black       cterm=NONE
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
@@ -89,7 +90,7 @@ hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=wh
 hi LongLineWarning  guifg=NONE        guibg=#371F1C     gui=underline ctermfg=NONE        ctermbg=NONE		  cterm=underline
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=NONE		gui=BOLD      ctermfg=white       ctermbg=NONE        cterm=BOLD
+hi ModeMsg          guifg=white       guibg=NONE		gui=BOLD      ctermfg=white       ctermbg=NONE        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=8			  cterm=BOLD
@@ -97,10 +98,11 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=#2F2F00     gui=underline ctermfg=black       ctermbg=5			  cterm=underline
+  hi Search         guifg=NONE        guibg=#2F2F00     gui=underline ctermfg=white		  ctermbg=5			  cterm=underline
 endif
 
 " Syntax highlighting
+
 hi Comment          guifg=#7C7C7C     guibg=NONE        gui=italic    ctermfg=darkgray    ctermbg=NONE        cterm=italic
 hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=magenta     ctermbg=NONE        cterm=NONE
@@ -121,6 +123,7 @@ hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=wh
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi ExtrawhiteSpace  guifg=NONE		  guibg=red			gui=NONE	  ctermfg=NONE		  ctermbg=red		  cterm=NONE
+hi SignColumn		guifg=NONE		  guibg=NONE		gui=NONE	  ctermfg=NONE		  ctermbg=233		  cterm=NONE
 
 hi link Character       Constant
 hi link Boolean         Constant
@@ -142,6 +145,7 @@ hi link Debug           Special
 hi link StringDelimiter Delimiter
 
 " Special for Ruby
+
 hi rubyRegexp                  guifg=#B18A3D      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
 hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
 hi rubyEscape                  guifg=white        guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE
@@ -161,7 +165,7 @@ hi link rubyConstant          Type
 hi link rubyInclude			  Include
 
 " Special for Java
-" hi link javaClassDecl    Type
+
 hi link javaScopeDecl         Identifier 
 hi link javaCommentTitle      javaDocSeeTag 
 hi link javaDocTags           javaDocSeeTag 
@@ -170,40 +174,53 @@ hi link javaDocSeeTagParam    javaDocSeeTag
 
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
-"hi javaClassDecl              guifg=#CCFFCC     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 
 " Special for XML
+
 hi link xmlTag          Keyword 
 hi link xmlTagName      Conditional 
 hi link xmlEndTag       Identifier 
 
 " Special for HTML
+
 hi link htmlTag         Keyword 
 hi link htmlTagName     Conditional 
 hi link htmlEndTag      Identifier 
 
 " Special for Javascript
+
 hi link javaScriptNumber Number
 
 " Special for Python
+
 hi link pythonEscape Keyword
 au FileType python syn keyword pythonDecorator self
 
 " Special for CSharp
+
 hi link csXmlTag Keyword
 
-" Gitgutter 
+" Vim Script
 
-hi GitGutterAdd guifg=green guibg=NONE gui=NONE ctermfg=green ctermbg=NONE
-hi GitGutterChange guifg=darkred guibg=NONE gui=NONE ctermfg=blue ctermbg=NONE
-hi GitGutterDelete guifg=darkred guibg=NONE gui=NONE ctermfg=red  ctermbg=NONE
-hi GitGutterChangeDelete guifg=darkred guibg=NONE gui=NONE ctermfg=darkred ctermbg=NONE
+hi vimNotation guifg=magenta guibg=NONE gui=NONE ctermfg=magenta ctermbg=NONE cterm=NONE
+hi link vimMapMod vimNotation
+
+" Git Gutter 
+
+hi GitGutterAdd			 guifg=#00CC00 guibg=NONE gui=NONE ctermfg=green ctermbg=233 cterm=NONE
+hi GitGutterChange		 guifg=#0066FF guibg=NONE gui=NONE ctermfg=blue  ctermbg=233 cterm=NONE
+hi GitGutterDelete		 guifg=#FF0000 guibg=NONE gui=NONE ctermfg=red   ctermbg=233 cterm=NONE
+hi GitGutterChangeDelete guifg=#FF0000 guibg=NONE gui=NONE ctermfg=red   ctermbg=233 cterm=NONE
 
 " Spelling
 
-hi SpellBad guifg=NONE guibg=darkred gui=underline ctermfg=NONE ctermbg=darkred cterm=underline
-hi SpellCap guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
-hi SpellRare guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
+hi SpellBad   guifg=NONE guibg=red	gui=underline ctermfg=NONE ctermbg=red  cterm=underline
+hi SpellCap   guifg=NONE guibg=NONE	gui=underline ctermfg=NONE ctermbg=NONE	cterm=underline
+hi SpellRare  guifg=NONE guibg=NONE	gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 hi SpellLocal guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 
-" TODO: Indent Guides
+" Indent Guides
+
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesEven guifg=NONE guibg=gray	  gui=NONE ctermfg=NONE ctermbg=gray	 cterm=NONE
+hi IndentGuidesOdd  guifg=NONE guibg=darkgray gui=NONE ctermfg=NONE ctermbg=darkgray cterm=NONE
