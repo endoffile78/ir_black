@@ -76,7 +76,7 @@ hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=bl
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
+hi Visual           guifg=NONE        guibg=#007173     gui=NONE      ctermfg=NONE        ctermbg=23		  cterm=NONE
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
@@ -111,7 +111,7 @@ hi Keyword          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=bl
 hi PreProc          guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi Conditional      guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE  " if else end
 
-hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=NONE
+hi Todo             guifg=#8f8f8f     guibg=NONE        gui=NONE      ctermfg=red         ctermbg=NONE        cterm=italic
 hi Constant         guifg=#99CC99     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 
 hi Identifier		guifg=#C6C5FE	  guibg=NONE		gui=NONE	  ctermfg=magenta	  ctermbg=NONE		  cterm=NONE
@@ -121,7 +121,7 @@ hi Statement        guifg=#6699CC     guibg=NONE        gui=NONE      ctermfg=li
 
 hi Special          guifg=#E18964     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi Operator         guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi Operator         guifg=blue        guibg=NONE        gui=NONE      ctermfg=blue        ctermbg=NONE        cterm=NONE
 hi ExtrawhiteSpace  guifg=NONE		  guibg=red			gui=NONE	  ctermfg=NONE		  ctermbg=red		  cterm=NONE
 hi SignColumn		guifg=NONE		  guibg=NONE		gui=NONE	  ctermfg=NONE		  ctermbg=233		  cterm=NONE
 
@@ -193,7 +193,8 @@ hi link javaScriptNumber Number
 
 " Special for Python
 
-hi link pythonEscape Keyword
+hi link pythonEscape   Keyword
+hi link pythonOperator Operator 
 au FileType python syn keyword pythonDecorator self
 
 " Special for CSharp
